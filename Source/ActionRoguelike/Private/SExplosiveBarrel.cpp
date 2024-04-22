@@ -12,7 +12,6 @@ ASExplosiveBarrel::ASExplosiveBarrel()
 	PrimaryActorTick.bCanEverTick = true;
 	
 	StaticMeshComp = CreateDefaultSubobject<UStaticMeshComponent>("StaticMeshComp");
-	StaticMeshComp->SetCollisionProfileName("Projectile");
 	const ConstructorHelpers::FObjectFinder<UStaticMesh> MeshObj(TEXT("/Game/ExampleContent/Meshes/SM_RedBarrel.SM_RedBarrel"));
 	StaticMeshComp->SetStaticMesh(MeshObj.Object);
 	StaticMeshComp->SetCollisionProfileName("PhysicsActor");
